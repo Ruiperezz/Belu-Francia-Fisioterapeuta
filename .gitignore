@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# VS Code / Cursor
+.vscode/settings.json
+.vscode/launch.json
+*.code-workspace
+
+# Node (si se usa alguna herramienta CLI)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+package-lock.json
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+*~
+
+# Archivos de sistema
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Preview (no subir el preview de 235KB al repo)
+preview/
+*.preview.html

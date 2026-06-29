@@ -1,0 +1,117 @@
+/* ============================================================
+   BELU FRANCIA · animations.css · v20260629
+   Animaciones CSS + helpers para GSAP
+   ============================================================ */
+
+/* ── HERO PARALLAX (sutil) ────────────────────────────────────── */
+@media (hover: hover) {
+  .hero-bg img {
+    will-change: transform;
+  }
+}
+
+/* ── CARD TILT ────────────────────────────────────────────────── */
+/* Activado vía GSAP en main.js — estas son las propiedades base */
+.tec-card,
+.test-card,
+.porque-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ── HOVER SCALE IMGS ─────────────────────────────────────────── */
+.serv-media,
+.gal-item,
+.sobre-img-main,
+.atm-media,
+.tec-img {
+  overflow: hidden;
+}
+
+/* ── PULSO FAB ───────────────────────────────────────────────── */
+@keyframes fabPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+  50%       { box-shadow: 0 4px 36px rgba(37,211,102,0.65); }
+}
+.fab {
+  animation: fabPulse 3s ease-in-out infinite;
+}
+.fab:hover {
+  animation: none;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+}
+
+/* ── LOADING SKELETON (para cuando se cargan imgs) ────────────── */
+@keyframes shimmer {
+  from { background-position: -400px 0; }
+  to   { background-position:  400px 0; }
+}
+.img-skeleton {
+  background: linear-gradient(90deg, var(--bg-2) 25%, var(--bg) 50%, var(--bg-2) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ── UNDERLINE ANIMADO (para links) ─────────────────────────────── */
+.link-anim {
+  position: relative;
+}
+.link-anim::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s cubic-bezier(0.16,1,0.3,1);
+}
+.link-anim:hover::after { transform: scaleX(1); }
+
+/* ── METODO STEP ENTER ────────────────────────────────────────── */
+.metodo-steps .metodo-step {
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.metodo-steps .metodo-step:hover {
+  transform: translateX(4px);
+}
+
+/* ── STAGGER UTILITY (GSAP usa esto como referencia) ─────────── */
+/*
+  Para stagger con GSAP:
+  gsap.from('.tec-card', { y:40, opacity:0, duration:.7, stagger:.09 })
+  
+  Los delays en CSS son solo fallback si GSAP no carga:
+*/
+.stagger-item { opacity: 0; }
+.stagger-item.in { opacity: 1; transition: opacity 0.5s, transform 0.5s; transform: none; }
+
+/* ── PAGE TRANSITION (preparado para implementar) ─────────────── */
+/*
+  Si se implementa page transition más adelante:
+  - Añadir clase .page-exit al body en beforeunload
+  - Nueva página entra con clase .page-enter → .page-enter-done
+*/
+.page-exit-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: var(--ink);
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+/* ── GRAIN OVERLAY ────────────────────────────────────────────── */
+/* Usado en hero + secciones oscuras para textura */
+.grain-overlay {
+  position: absolute; inset: 0;
+  opacity: 0.035; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── REDUCED MOTION ─────────────────────────────────────────── */
+/* Solo para efectos realmente intrusivos (loops rápidos, partículas) */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation-duration: 120s; } /* más lento, no desactivado */
+  .fab          { animation: none; }
+  .hero-bg img  { transition: none; }
+}
+/* NO incluir aquí: hover tilt, fades, cursor, count-up, card hover */
