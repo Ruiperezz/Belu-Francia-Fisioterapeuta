@@ -14,7 +14,7 @@
   <meta property="og:locale" content="es_ES"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <link rel="canonical" href="https://belufisio.com/"/>
-  <link rel="icon" href="https://belufisio.com/wp-content/uploads/2024/10/55776-1730221831favilogo.png" type="image/png"/>
+  <link rel="icon" href="assets/img/logo/favicon.png" type="image/png"/>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/main.css?v=20260629"/>
   <link rel="stylesheet" href="css/components.css?v=20260629"/>
   <link rel="stylesheet" href="css/animations.css?v=20260629"/>
-  <link rel="preload" as="image" href="assets/img/hero/hero-principal.webp" fetchpriority="high"/>
+  <link rel="preload" as="image" href="assets/img/sobre-mi/belu-principal.webp" fetchpriority="high"/>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -180,47 +180,54 @@
 
 <!-- ═══ HERO ══════════════════════════════════════════════════ -->
 <section class="hero" id="hero" aria-label="Presentación principal">
-  <div class="hero-bg">
+
+  <!-- Panel izquierdo: texto sobre fondo oscuro -->
+  <div class="hero-left">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Fisioterapia · Osteopatía · Cartagena, Murcia</span>
+      <h1 class="hero-title r-up">
+        Recupera tu movimiento.<br>
+        <em>Vuelve a vivir sin dolor.</em>
+      </h1>
+      <p class="hero-subtitle r-up">
+        Tratamientos que van al origen del problema, no solo al síntoma.
+        Más de 15 años acompañando recuperaciones reales en Cartagena.
+      </p>
+      <div class="hero-actions r-up">
+        <a href="#contacto" class="btn btn-primary btn-lg">Pedir cita ahora</a>
+        <a href="https://wa.me/message/27PLZRZVNFRQN1" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">WhatsApp →</a>
+      </div>
+      <div class="hero-trust r-up">
+        <div class="trust-stat">
+          <span class="trust-num"><span data-count="15">15</span><sup>+</sup></span>
+          <span class="trust-label">años de experiencia</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-stat">
+          <span class="trust-num"><span data-count="200">200</span><sup>+</sup></span>
+          <span class="trust-label">pacientes recuperados</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-stat">
+          <span class="trust-star">★ 5.0</span>
+          <span class="trust-label">Google Reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel derecho: retrato de Belu -->
+  <div class="hero-right">
     <img
-      src="assets/img/hero/hero-principal.webp"
-      alt="Sesión de fisioterapia en clínica Belu Francia, Cartagena"
+      src="assets/img/sobre-mi/belu-principal.webp"
+      alt="Belu Francia, fisioterapeuta y osteópata en Cartagena"
       loading="eager"
       fetchpriority="high"
+      width="854"
+      height="1280"
     />
   </div>
-  <div class="hero-scrim"></div>
-  <div class="hero-grain" aria-hidden="true"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">Fisioterapia · Osteopatía · Cartagena, Murcia</span>
-    <h1 class="hero-title r-up">
-      Recupera tu movimiento.<br>
-      <em>Vuelve a vivir sin dolor.</em>
-    </h1>
-    <p class="hero-subtitle r-up">
-      Tratamientos que van al origen del problema, no solo al síntoma.
-      Más de 15 años acompañando recuperaciones reales en Cartagena.
-    </p>
-    <div class="hero-actions r-up">
-      <a href="#contacto" class="btn btn-primary btn-lg">Pedir cita ahora</a>
-      <a href="#metodo"   class="btn btn-ghost">Cómo trabajo →</a>
-    </div>
-    <div class="hero-trust r-up">
-      <div class="trust-stat">
-        <span class="trust-num"><span data-count="15">15</span><sup>+</sup></span>
-        <span class="trust-label">años de experiencia</span>
-      </div>
-      <div class="trust-divider" aria-hidden="true"></div>
-      <div class="trust-stat">
-        <span class="trust-num"><span data-count="200">200</span><sup>+</sup></span>
-        <span class="trust-label">pacientes recuperados</span>
-      </div>
-      <div class="trust-divider" aria-hidden="true"></div>
-      <div class="trust-stat">
-        <span class="trust-star">★ 5.0</span>
-        <span class="trust-label">Google Reviews</span>
-      </div>
-    </div>
-  </div>
+
 </section>
 
 <!-- ═══ TICKER ════════════════════════════════════════════════ -->
