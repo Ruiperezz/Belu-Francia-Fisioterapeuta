@@ -677,3 +677,28 @@
   .atm-wrap { grid-template-columns: 1fr; }
   .atm-media { aspect-ratio: 16/9; }
 }
+
+/* ── RESPONSIVE FIXES ────────────────────────────────────────── */
+
+/* Sobre mí: grid 1 columna en tablet/móvil */
+@media (max-width: 860px) {
+  #sobre-mi > .container > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* serv-block: reducir gap en tablet */
+@media (max-width: 900px) and (min-width: 761px) {
+  .serv-block {
+    gap: 32px;
+  }
+}
+
+/* hero-trust: colapso en móviles muy pequeños */
+@media (max-width: 380px) {
+  .hero-trust {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .trust-divider { display: none; }
+}

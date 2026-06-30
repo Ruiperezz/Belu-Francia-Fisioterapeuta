@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Belu Francia · Fisioterapia y Osteopatía en Cartagena</title>
-  <meta name="description" content="Clínica de fisioterapia y osteopatía en Cartagena con más de 15 años de experiencia. Tratamientos personalizados para recuperar tu movimiento y calidad de vida."/>
+  <meta name="description" content="Fisioterapia y osteopatía en Cartagena · +15 años de experiencia · Terapia manual, ondas de choque, diatermia y ecografía. Primera consulta gratuita."/>
   <meta name="robots" content="index,follow"/>
   <meta property="og:title" content="Belu Francia · Fisioterapia y Osteopatía en Cartagena"/>
   <meta property="og:description" content="Más de 15 años ayudando a personas a recuperar su movimiento. Fisioterapia, osteopatía y tecnología avanzada en Cartagena."/>
@@ -25,6 +25,110 @@
   <link rel="stylesheet" href="css/main.css?v=20260629"/>
   <link rel="stylesheet" href="css/components.css?v=20260629"/>
   <link rel="stylesheet" href="css/animations.css?v=20260629"/>
+  <link rel="preload" as="image" href="assets/img/hero/hero-principal.webp" fetchpriority="high"/>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["MedicalBusiness", "LocalBusiness"],
+      "@id": "https://belufisio.com/#negocio",
+      "name": "Belu Francia Fisioterapia y Osteopatía",
+      "url": "https://belufisio.com",
+      "telephone": "+34639290762",
+      "email": "belufrancia@gmail.com",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cartagena",
+        "addressRegion": "Murcia",
+        "addressCountry": "ES"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/belufisio/",
+        "https://www.facebook.com/belufisio/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "ratingCount": "6"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de fisioterapia y osteopatía",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fisioterapia personalizada",
+              "description": "Terapia manual, ejercicio terapéutico y técnicas avanzadas para dolor cervical, lumbar, lesiones deportivas y rehabilitación post-operatoria."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Osteopatía",
+              "description": "Técnicas manuales para el sistema músculo-esquelético, visceral y craneal. Bloqueos articulares, migrañas, ATM y valoración postural."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rehabilitación y readaptación",
+              "description": "Recuperación funcional tras lesión o cirugía. Rehabilitación deportiva, readaptación muscular y vuelta progresiva al deporte."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ejercicio terapéutico",
+              "description": "Programas individualizados de corrección postural, activación funcional y prevención de lesiones adaptados a cada paciente."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tratamiento de ATM y bruxismo",
+              "description": "Terapia manual, radiofrecuencia y ejercicios específicos para la articulación temporomandibular. Dolor de cabeza, tensión cervical y pitidos en oídos."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Belu Francia",
+      "jobTitle": "Fisioterapeuta y Osteópata",
+      "worksFor": {"@id": "https://belufisio.com/#negocio"},
+      "hasCredential": [
+        "Diplomada en Fisioterapia — Universidad de Murcia",
+        "Osteópata C.O. — FBEO",
+        "Especialista en ecografía clínica"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -33,6 +137,7 @@
   <span class="cursor-dot"></span>
   <span class="cursor-ring"></span>
 </div>
+<a href="#hero" class="skip-link">Saltar al contenido principal</a>
 
 <!-- ═══ NAVEGACIÓN ════════════════════════════════════════════ -->
 <header class="nav" id="mainNav" role="banner">
@@ -76,9 +181,8 @@
 <!-- ═══ HERO ══════════════════════════════════════════════════ -->
 <section class="hero" id="hero" aria-label="Presentación principal">
   <div class="hero-bg">
-    <!-- TODO: reemplazar src por assets/img/hero/hero-principal.webp cuando esté optimizada -->
     <img
-      src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-17-03-16-scaled.jpg"
+      src="assets/img/hero/hero-principal.webp"
       alt="Sesión de fisioterapia en clínica Belu Francia, Cartagena"
       loading="eager"
       fetchpriority="high"
@@ -155,9 +259,8 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:center">
       <div class="r-l" style="border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;position:relative">
-        <!-- TODO: reemplazar por assets/img/metodo/metodo-1.webp -->
         <img
-          src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-17-19-51-1-scaled-e1778491140750.jpg"
+          src="assets/img/metodo/metodo-1.webp"
           alt="Belu Francia realizando valoración posturológica a paciente"
           style="width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease-out)"
           loading="lazy"
@@ -170,10 +273,10 @@
         <span class="eyebrow">Cómo trabajo</span>
         <h2>Un método <em>que va al origen,</em><br>no solo al síntoma.</h2>
         <p class="text-lg" style="margin-top:16px">
-          El cuerpo funciona como un sistema interconectado a través del sistema nervioso. Cuando solo tratamos el síntoma visible, el alivio es temporal y las recaídas vuelven.
+          Si llevas tiempo con el mismo dolor, hay razones para eso. Tratar solo el síntoma visible da alivio temporal — las recaídas vuelven porque el origen sigue ahí.
         </p>
         <p class="text-md" style="margin:12px 0 0">
-          Utilizo un método integrativo basado en diagnóstico neuromuscular y examen posturológico para encontrar la raíz del problema — sea músculo-esquelética, visceral o craneal — y trabajar ahí.
+          Por eso trabajo con un método integrativo: diagnóstico neuromuscular, examen postural y valoración global para encontrar la raíz real — que a veces está en un lugar que sorprende — y tratar ahí.
         </p>
         <div class="metodo-steps" style="display:flex;flex-direction:column;gap:20px;margin:28px 0 32px">
           <div class="metodo-step">
@@ -220,9 +323,8 @@
     <!-- FISIOTERAPIA -->
     <div class="serv-block" id="fisioterapia">
       <div class="serv-media r-l">
-        <!-- TODO: assets/img/servicios/fisioterapia.webp -->
         <img
-          src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-16-25-09-scaled.jpg"
+          src="assets/img/servicios/fisioterapia.webp"
           alt="Fisioterapia manual — tratamiento de contracturas y dolor en Cartagena"
           loading="lazy"
         />
@@ -249,9 +351,8 @@
     <!-- OSTEOPATÍA -->
     <div class="serv-block reverse" id="osteopatia">
       <div class="serv-media r-r">
-        <!-- TODO: assets/img/servicios/osteopatia.webp -->
         <img
-          src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-17-34-04-scaled.jpg"
+          src="assets/img/servicios/osteopatia.webp"
           alt="Osteopatía — tratamiento manual global del cuerpo en Cartagena"
           loading="lazy"
         />
@@ -278,9 +379,8 @@
     <!-- REHABILITACIÓN -->
     <div class="serv-block" id="rehabilitacion">
       <div class="serv-media r-l">
-        <!-- TODO: assets/img/servicios/rehabilitacion.webp -->
         <img
-          src="https://belufisio.com/wp-content/uploads/2024/12/IMG_4343.jpg"
+          src="assets/img/servicios/rehabilitacion.webp"
           alt="Rehabilitación deportiva y readaptación funcional — Belu Francia"
           loading="lazy"
         />
@@ -307,9 +407,8 @@
     <!-- EJERCICIO TERAPÉUTICO -->
     <div class="serv-block reverse" id="ejercicio">
       <div class="serv-media r-r">
-        <!-- TODO: assets/img/servicios/ejercicio.webp -->
         <img
-          src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-17-28-16-scaled.jpg"
+          src="assets/img/servicios/ejercicio.webp"
           alt="Ejercicio terapéutico — activación funcional y control postural"
           loading="lazy"
         />
@@ -319,7 +418,7 @@
         <span class="eyebrow">04</span>
         <h3>Ejercicio terapéutico</h3>
         <p class="text-md" style="margin:12px 0">
-          El movimiento bien prescrito es la herramienta más potente para mantener los resultados. No es gimnasio — es ejercicio diseñado específicamente para tu cuerpo y tu situación.
+          Lo que hagas entre sesiones importa tanto como la sesión. No es gimnasio — es ejercicio diseñado específicamente para tu cuerpo y tu situación.
         </p>
         <ul class="serv-lista">
           <li>Corrección postural y control corporal</li>
@@ -335,9 +434,8 @@
     <!-- ATM HIGHLIGHT -->
     <div class="atm-wrap r-up" id="atm">
       <div class="atm-media">
-        <!-- TODO: assets/img/servicios/atm.webp -->
         <img
-          src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-16-46-04-scaled.jpg"
+          src="assets/img/servicios/atm.webp"
           alt="Tratamiento especializado de ATM y bruxismo — Belu Francia"
           loading="lazy"
         />
@@ -346,7 +444,7 @@
         <span class="eyebrow eyebrow-tierra">Tratamiento especializado</span>
         <h3>ATM y bruxismo:<br><em>más que un problema de mandíbula.</em></h3>
         <p class="text-md" style="margin:14px 0">
-          La articulación temporomandibular puede provocar dolor de cabeza, tensión cervical, mareos, pitidos en oídos y muchos otros síntomas que parecen no tener relación. El bruxismo y las disfunciones de ATM afectan al 70–90% de la población en algún momento.
+          La articulación temporomandibular puede provocar dolor de cabeza, tensión cervical, mareos, pitidos en oídos y muchos otros síntomas que parecen no tener relación. La mandíbula y el cuello están más conectados de lo que parece. Por eso los síntomas suelen aparecer lejos del origen.
         </p>
         <p class="text-md" style="margin-bottom:22px">
           El tratamiento combina terapia manual, radiofrecuencia, ejercicios específicos y corrección postural, con coordinación multidisciplinar cuando es necesario.
@@ -362,15 +460,14 @@
   <div class="container">
     <div class="section-header centered r-up">
       <span class="eyebrow">Tecnología avanzada</span>
-      <h2>La mejor tecnología al servicio<br><em>de tu recuperación.</em></h2>
-      <p class="section-desc">La terapia manual tiene un límite. La tecnología lo amplía. Combinamos las dos para que cada tratamiento sea lo más efectivo posible.</p>
+      <h2>La tecnología amplía lo que<br><em>las manos solas no pueden.</em></h2>
+      <p class="section-desc">La terapia manual tiene un límite. La tecnología lo amplía. Aquí usamos ambas para que tu recuperación no dependa de un solo enfoque.</p>
     </div>
     <div class="tec-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
 
       <div class="tec-card r-up">
         <div class="tec-img">
-          <!-- TODO: assets/img/tecnologia/diatermia.webp -->
-          <img src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-17-43-56-1-scaled.jpg"
+          <img src="assets/img/tecnologia/diatermia.webp"
                alt="Diatermia SYMPHIUM-ONE PLUS — tecaterapia para tejidos profundos" loading="lazy"/>
         </div>
         <div class="tec-body">
@@ -387,8 +484,7 @@
 
       <div class="tec-card r-up">
         <div class="tec-img">
-          <!-- TODO: assets/img/tecnologia/ondas-choque.webp -->
-          <img src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-17-40-41-scaled.jpg"
+          <img src="assets/img/tecnologia/ondas-choque.webp"
                alt="Ondas de choque SYMPHIUM-ELEVEN PLUS — tratamiento de tendinopatías" loading="lazy"/>
         </div>
         <div class="tec-body">
@@ -404,8 +500,7 @@
 
       <div class="tec-card r-up">
         <div class="tec-img">
-          <!-- TODO: assets/img/tecnologia/ecografia.webp -->
-          <img src="https://belufisio.com/wp-content/uploads/2024/12/93FD7461-22CD-43D4-8BDF-BFE721F09EFE.jpg"
+          <img src="assets/img/tecnologia/ecografia.webp"
                alt="Ecografía VScan Air SL — diagnóstico por imagen en fisioterapia" loading="lazy"/>
         </div>
         <div class="tec-body">
@@ -421,8 +516,7 @@
 
       <div class="tec-card r-up">
         <div class="tec-img">
-          <!-- TODO: assets/img/tecnologia/presoterapia.webp -->
-          <img src="https://belufisio.com/wp-content/uploads/2024/12/IMG_4416.jpg"
+          <img src="assets/img/tecnologia/presoterapia.webp"
                alt="Presoterapia PACK SIZEN 8e — drenaje linfático y recuperación muscular" loading="lazy"/>
         </div>
         <div class="tec-body">
@@ -438,8 +532,7 @@
 
       <div class="tec-card r-up">
         <div class="tec-img">
-          <!-- TODO: assets/img/tecnologia/ena.webp -->
-          <img src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-16-35-56-scaled.jpg"
+          <img src="assets/img/tecnologia/ena.webp"
                alt="Electroneuroacupuntura EnA — neuromodulación y punción seca avanzada" loading="lazy"/>
         </div>
         <div class="tec-body">
@@ -455,8 +548,7 @@
 
       <div class="tec-card r-up">
         <div class="tec-img">
-          <!-- TODO: assets/img/tecnologia/vaf.webp -->
-          <img src="https://belufisio.com/wp-content/uploads/2026/05/228762da43615752cdbe11922a2cd6d4-e1778493980444.jpg"
+          <img src="assets/img/tecnologia/vaf.webp"
                alt="Valoración postural VAF INTECC — análisis de columna y postura" loading="lazy"/>
         </div>
         <div class="tec-body">
@@ -480,9 +572,8 @@
     <div style="display:grid;grid-template-columns:480px 1fr;gap:clamp(36px,6vw,96px);align-items:start">
       <div class="sobre-media-stack r-l">
         <div class="sobre-img-main">
-          <!-- TODO: assets/img/sobre-mi/belu-principal.webp -->
           <img
-            src="https://belufisio.com/wp-content/uploads/2024/12/IMG_0240-scaled.jpg"
+            src="assets/img/sobre-mi/belu-principal.webp"
             alt="Belu Francia — fisioterapeuta y osteópata en Cartagena"
             loading="lazy"
           />
@@ -527,32 +618,27 @@
     </div>
     <div class="gal-grid">
       <div class="gal-item gal-wide r-up">
-        <!-- TODO: assets/img/galeria/galeria-1.webp -->
-        <img src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-17-03-16-scaled.jpg"
+        <img src="assets/img/galeria/galeria-1.webp"
              alt="Sala de tratamiento principal — clínica Belu Francia Cartagena" loading="lazy"/>
         <div class="gal-caption">Sala principal de tratamiento</div>
       </div>
       <div class="gal-item gal-tall r-up">
-        <!-- TODO: assets/img/galeria/galeria-2.webp -->
-        <img src="https://belufisio.com/wp-content/uploads/2024/12/IMG_0215-scaled.jpg"
+        <img src="assets/img/galeria/galeria-2.webp"
              alt="Sala de rehabilitación y readaptación" loading="lazy"/>
         <div class="gal-caption">Área de rehabilitación</div>
       </div>
       <div class="gal-item r-up">
-        <!-- TODO: assets/img/galeria/galeria-3.webp -->
-        <img src="https://belufisio.com/wp-content/uploads/2024/12/Foto-5-11-24-17-20-06-scaled.jpg"
+        <img src="assets/img/galeria/galeria-3.webp"
              alt="Valoración posturológica en consulta" loading="lazy"/>
         <div class="gal-caption">Valoración posturológica</div>
       </div>
       <div class="gal-item r-up">
-        <!-- TODO: assets/img/galeria/galeria-4.webp -->
-        <img src="https://belufisio.com/wp-content/uploads/2024/12/IMG_0210-scaled.jpg"
+        <img src="assets/img/galeria/galeria-4.webp"
              alt="Equipamiento de tecnología avanzada" loading="lazy"/>
         <div class="gal-caption">Tecnología de vanguardia</div>
       </div>
       <div class="gal-item r-up">
-        <!-- TODO: assets/img/galeria/galeria-5.webp -->
-        <img src="https://belufisio.com/wp-content/uploads/2024/12/IMG_0196-scaled.jpg"
+        <img src="assets/img/galeria/galeria-5.webp"
              alt="Tratamiento combinado de fisioterapia y osteopatía" loading="lazy"/>
         <div class="gal-caption">Tratamiento integral</div>
       </div>
@@ -582,7 +668,7 @@
       <div class="porque-card r-up">
         <div class="porque-num">03</div>
         <h4>Tecnología que marca diferencia</h4>
-        <p>Diatermia SYMPHIUM®, ondas de choque, ecografía VScan Air™, presoterapia SIZEN® y EnA®. Tecnología de clínica de referencia en Cartagena.</p>
+        <p>Diatermia SYMPHIUM®, ondas de choque, ecografía VScan Air™, presoterapia SIZEN® y EnA®. Tecnología que pocas clínicas en Cartagena tienen.</p>
       </div>
       <div class="porque-card r-up">
         <div class="porque-num">04</div>
@@ -755,9 +841,9 @@
         <h3>Envíame un mensaje</h3>
         <p class="form-subtitle">Te respondo en menos de 24 horas.</p>
 
-        <!-- TODO: Cambiar action por endpoint Formspree: https://formspree.io/f/XXXXXXXX -->
-        <!-- Ver CLAUDE.md → "Integraciones pendientes" para instrucciones -->
-        <form id="contactForm" novalidate>
+        <form id="contactForm" action="https://formspree.io/f/FORMSPREE_ID_AQUI" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nueva cita — Belu Francia"/>
+          <input type="hidden" name="_next" value="pages/gracias.html"/>
           <div class="form-row">
             <div class="form-group">
               <label for="nombre">Nombre <span class="req">*</span></label>
@@ -884,6 +970,27 @@
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
 </a>
+
+<div id="cookieBanner" class="cookie-banner" role="alertdialog" aria-label="Aviso de cookies" aria-live="polite" style="display:none">
+  <p class="cookie-text">Esta web utiliza cookies técnicas necesarias para su funcionamiento.</p>
+  <button class="cookie-btn btn btn-primary btn-sm" id="cookieAccept">Aceptar</button>
+</div>
+<style>
+.cookie-banner{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#F7F3EE;padding:14px 20px;border-radius:100px;display:flex;align-items:center;gap:14px;box-shadow:0 8px 32px rgba(28,25,23,0.25);z-index:9998;white-space:nowrap;border:1px solid rgba(247,243,238,0.1)}
+.cookie-text{font-size:.8rem;color:rgba(247,243,238,0.75);margin:0}
+</style>
+<script>
+(function(){
+  if(localStorage.getItem('belu-cookies')==='1')return;
+  var b=document.getElementById('cookieBanner');
+  if(b)b.style.display='flex';
+  var btn=document.getElementById('cookieAccept');
+  if(btn)btn.addEventListener('click',function(){
+    localStorage.setItem('belu-cookies','1');
+    b.style.display='none';
+  });
+})();
+</script>
 
 <!-- Scripts — orden obligatorio, cache busters obligatorios -->
 <script defer src="js/gsap.min.js?v=20260629"></script>

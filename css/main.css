@@ -255,3 +255,15 @@ p  { color: var(--ink-soft); }
   .nav, .ticker-wrap, .fab, .cursor, .mobile-menu { display: none !important; }
   .section { padding: 24px 0; }
 }
+
+/* ── SKIP LINK ───────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  transform: translateY(-100%);
+  left: 16px; top: 16px;
+  background: var(--azul); color: #fff;
+  padding: 8px 16px; border-radius: var(--r-sm);
+  font-size: .875rem; font-weight: 500; z-index: 9999;
+  transition: transform .2s;
+}
+.skip-link:focus { transform: translateY(0); }
