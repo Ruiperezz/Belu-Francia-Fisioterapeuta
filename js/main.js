@@ -74,50 +74,6 @@
   }
 
   /* ──────────────────────────────────────────────────────────
-     CURSOR PERSONALIZADO — dos círculos con lag
-     ────────────────────────────────────────────────────────── */
-  function initCursor() {
-    var root = document.querySelector('[data-cursor-root]');
-    if (!root) return;
-    if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-    document.documentElement.classList.add('has-cursor');
-    var dot  = root.querySelector('.cursor-dot');
-    var ring = root.querySelector('.cursor-ring');
-    var tx = 0, ty = 0, rx = 0, ry = 0, firstMove = false;
-
-    window.addEventListener('mousemove', function (e) {
-      tx = e.clientX; ty = e.clientY;
-      if (dot) dot.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0)';
-      if (!firstMove) {
-        firstMove = true;
-        rx = tx; ry = ty;
-        root.classList.add('is-ready');
-      }
-    }, { passive: true });
-
-    // Loop con lerp 18% para el ring (más suave que el dot)
-    (function tick() {
-      rx += (tx - rx) * 0.16;
-      ry += (ty - ry) * 0.16;
-      if (ring) ring.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0)';
-      requestAnimationFrame(tick);
-    })();
-
-    // Hover state en elementos interactivos
-    var HOVERABLES = 'a, button, .btn, .tec-card, .test-card, .porque-card, .serv-media, .gal-item, [data-cursor]';
-    document.addEventListener('mouseover', function (e) {
-      if (e.target.closest(HOVERABLES)) root.classList.add('active');
-    });
-    document.addEventListener('mouseout', function (e) {
-      if (e.target.closest(HOVERABLES) &&
-          (!e.relatedTarget || !e.relatedTarget.closest || !e.relatedTarget.closest(HOVERABLES))) {
-        root.classList.remove('active');
-      }
-    });
-  }
-
-  /* ──────────────────────────────────────────────────────────
      SCROLL REVEALS — IntersectionObserver
      ────────────────────────────────────────────────────────── */
   function initReveals() {
@@ -202,19 +158,11 @@
       gsap.registerPlugin(ScrollTrigger);
     }
 
-    // Cancelar safety timer — GSAP se encarga
-    clearTimeout(safetyTimer);
-
-    /* Hero — entrada escalonada */
-    var heroEls = document.querySelectorAll('.hero-content > *');
-    if (heroEls.length) {
-      gsap.from(heroEls, {
-        y: 36, opacity: 0, duration: 0.95,
-        ease: 'power3.out', stagger: 0.12, delay: 0.1
-      });
-      // Revelar inmediatamente los elementos del hero
-      heroEls.forEach(function (el) { el.classList.add('in'); });
-    }
+    /* Nota: los reveals (.r-up/.r-l/.r-r → .in) los gestiona únicamente
+       initReveals() vía IntersectionObserver + el safety net de 5s.
+       GSAP aquí solo añade el card tilt — no se duplica el sistema de
+       entrada para evitar que un fallo de ScrollTrigger dependiente del
+       layout deje contenido con opacity:0 inline permanentemente. */
 
     /* Card tilt en hover — solo desktop */
     if (matchMedia('(hover: hover)').matches) {
@@ -236,56 +184,6 @@
       });
     }
 
-    /* ScrollTrigger — staggers en secciones */
-    if (typeof ScrollTrigger !== 'undefined') {
-
-      // Tecnología cards
-      var tecCards = document.querySelectorAll('.tec-card');
-      if (tecCards.length) {
-        gsap.from(tecCards, {
-          scrollTrigger: { trigger: '.tec-grid', start: 'top 82%' },
-          y: 40, opacity: 0, duration: 0.7, ease: 'power3.out', stagger: 0.09
-        });
-      }
-
-      // Testimonios
-      var testCards = document.querySelectorAll('.test-card');
-      if (testCards.length) {
-        gsap.from(testCards, {
-          scrollTrigger: { trigger: '.test-grid', start: 'top 82%' },
-          y: 30, opacity: 0, duration: 0.65, ease: 'power3.out', stagger: 0.08
-        });
-      }
-
-      // Por qué cards
-      var porqueCards = document.querySelectorAll('.porque-card');
-      if (porqueCards.length) {
-        gsap.from(porqueCards, {
-          scrollTrigger: { trigger: '.porque-grid', start: 'top 82%' },
-          y: 24, opacity: 0, duration: 0.65, ease: 'power2.out', stagger: 0.1
-        });
-      }
-
-      // Galería parallax sutil
-      document.querySelectorAll('.gal-item img').forEach(function (img) {
-        gsap.to(img, {
-          y: -18, ease: 'none',
-          scrollTrigger: {
-            trigger: img.parentElement,
-            start: 'top bottom', end: 'bottom top', scrub: true
-          }
-        });
-      });
-
-      // Metodo steps
-      var metodoSteps = document.querySelectorAll('.metodo-step');
-      if (metodoSteps.length) {
-        gsap.from(metodoSteps, {
-          scrollTrigger: { trigger: '.metodo-steps', start: 'top 80%' },
-          x: -20, opacity: 0, duration: 0.6, ease: 'power2.out', stagger: 0.12
-        });
-      }
-    }
   }
 
   /* ──────────────────────────────────────────────────────────
@@ -375,7 +273,6 @@
   function init() {
     safe(initNav,         'nav');
     safe(initMobileMenu,  'mobileMenu');
-    safe(initCursor,      'cursor');
     safe(initReveals,     'reveals');
     safe(initCountUp,     'countUp');
     safe(initAnchors,     'anchors');
